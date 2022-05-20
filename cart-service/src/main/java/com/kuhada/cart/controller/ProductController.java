@@ -21,7 +21,6 @@ public class ProductController {
 	@Autowired
 	private ProductService productService;
 	
-	
 	@GetMapping("/products/{id}")
 	public ResponseEntity<Product> getByProductId(@PathVariable("id") Integer id) throws JsonProcessingException {
 		Product p = productService.getProductById(id);
