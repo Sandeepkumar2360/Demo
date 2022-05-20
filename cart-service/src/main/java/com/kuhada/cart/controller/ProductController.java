@@ -39,6 +39,8 @@ public class ProductController {
 		Product p =  productService.update(product);
 		return new ResponseEntity(p,  HttpStatus.CREATED);
 	}
+	
+	
 	@DeleteMapping("/products")
 	public ResponseEntity<Product> delete(@RequestBody Product product) {
 		productService.delete(product);
